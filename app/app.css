@@ -28,3 +28,18 @@
   content: "";
   padding: 0;
 }
+
+
+/* chart styling */
+.ac-tooltip {
+    color: black;
+    border: 2px solid rgba(200,200,0,0.8);
+    background-color: rgba(200,200,0,0.5);
+}
+#chart1 .ac-legend-box {
+    border-radius: 10px;
+}
+#chart1, #chart2 {
+    width: 500px;
+    height: 400px;
+}
