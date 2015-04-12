@@ -6,9 +6,13 @@ angular.module('myApp', [
   'myApp.view1',
   'myApp.view2',
   'myApp.version',
-  'angularCharts'
+  'myApp.parseServices' /* this is the Parse SDK */,
+  'angularCharts',
+  /* Parse 3rd party */
+  'parse-angular',
+  'parse-angular.enhance'
 ]).
 config(['$routeProvider', function($routeProvider) {
   $routeProvider.otherwise({redirectTo: '/view1'});
-  var test;
+  
 }]);
