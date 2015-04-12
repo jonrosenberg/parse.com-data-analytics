@@ -6,7 +6,7 @@ angular.module('myApp', [
   'myApp.view1',
   'myApp.view2',
   'myApp.version',
-  'myApp.parseServices' /* this is the Parse SDK */,
+  'parseServices' /* this is the Parse SDK */,
   'angularCharts',
   /* Parse 3rd party */
   'parse-angular',
@@ -15,4 +15,6 @@ angular.module('myApp', [
 config(['$routeProvider', function($routeProvider) {
   $routeProvider.otherwise({redirectTo: '/view1'});
   
+}]).run(['ParseSDK', function(parseServices) {
+	// Parse is initialised by injecting the ParseService into the Angular app
 }]);
