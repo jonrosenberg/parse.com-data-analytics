@@ -13,6 +13,7 @@ angular.module('myApp.view2', ['ngRoute', 'parseServices'])
 		console.log('view 2 controller');
 	
 	// Queries
+	
 	var query = new Parse.Query("Level");
 	query.equalTo("name", "Guru");
 	query.first()

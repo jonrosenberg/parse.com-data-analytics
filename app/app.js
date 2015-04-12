@@ -15,6 +15,6 @@ angular.module('myApp', [
 config(['$routeProvider', function($routeProvider) {
   $routeProvider.otherwise({redirectTo: '/view1'});
   
-}]).run(['ParseSDK', function(parseServices) {
+}]).run(['ParseSDK', function() {
 	// Parse is initialised by injecting the ParseService into the Angular app
 }]);
