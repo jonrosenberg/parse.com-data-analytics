@@ -1,6 +1,6 @@
 'use strict';
 
-describe('myApp.view1 module', function() {
+xdescribe('myApp.view1 module', function() {
 
 
 	beforeEach(function(){
