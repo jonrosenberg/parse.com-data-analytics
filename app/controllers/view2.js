@@ -9,21 +9,27 @@ angular.module('myApp.view2', ['ngRoute', 'parseServices'])
   });
 }])
 
-.controller('View2Ctrl', [function() {
+.controller('View2Ctrl', ['$scope', function($scope) {
 		console.log('view 2 controller');
 	
 	// Queries
 	
-	var query = new Parse.Query("Level");
-	query.equalTo("name", "Guru");
-	query.first()
-	.then(function(result){
-	        console.log(result);
+	// var query = new Parse.Query("Level");
+	// query.equalTo("name", "Guru");
+	// query.first()
+	// .then(function(result){
+	//         console.log(result);
+	// });
+
+	
+	pda.parseCloudFunctions.topDistinctValues("Quiz", 100, function(result){
+		console.log('callback parse data');
+		console.log(result);
+		pda.parseCloudFunctions.parseDataForCharts(result);
 	});
-	// Cloud Code is patched too!
-	/*Parse.Cloud.run("myCloudCodeFunction", function(results) {
-	    //$scope.data = results;
-	    console.log(result);
-	});*/
+	
 
 }]);
+
+
+
