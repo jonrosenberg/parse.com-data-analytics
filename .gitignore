@@ -6,4 +6,4 @@ logs/*
 .DS_Store
 .idea
 npm-debug.log
-#./app/services/parse-credentials.js
+./app/services/parse-credentials.js
