@@ -1,10 +1,10 @@
 'use strict';
 
-xdescribe('myApp.view1 module', function() {
+xdescribe('view1 module', function() {
 
 
 	beforeEach(function(){
-		module('myApp.view1');
+		module('view1');
 	});
 
 	describe('view1 controller', function(){

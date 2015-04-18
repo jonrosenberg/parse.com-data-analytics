@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('myApp.view2', ['ngRoute', 'parseServices'])
+angular.module('view2', ['ngRoute', 'parseServices'])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/view2', {
@@ -14,18 +14,19 @@ angular.module('myApp.view2', ['ngRoute', 'parseServices'])
 	
 	// Queries
 	
-	// var query = new Parse.Query("Level");
-	// query.equalTo("name", "Guru");
-	// query.first()
-	// .then(function(result){
-	//         console.log(result);
-	// });
+	var query = new Parse.Query("Level");
+	query.equalTo("name", "Guru");
+	query.first()
+	.then(function(result){
+			console.log('query complete');
+	        //console.log(result);
+	});
 
 	
-	pda.parseCloudFunctions.topDistinctValues("Quiz", 100, function(result){
-		console.log('callback parse data');
-		console.log(result);
-		pda.parseCloudFunctions.parseDataForCharts(result);
+	pda.parseFunctions.topDistinctValues("Quiz", 100, function(result){
+		// console.log('callback parse data');
+		// console.log(result);
+		var chartData = pda.parseFunctions.parseDataForCharts(result);
 	});
 	
 

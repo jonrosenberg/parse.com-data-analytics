@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('myApp.view1', ['ngRoute', 'angularCharts'])
+angular.module('view1', ['ngRoute', 'angularCharts'])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/view1', {
